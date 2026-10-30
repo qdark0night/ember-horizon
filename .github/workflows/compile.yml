@@ -1,0 +1,60 @@
+name: Rust Build
+
+on:
+  push:
+    branches: [ "main", "master" ] # Замените на имя вашей главной ветки, если она другая
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Rust Cache
+      uses: swatinem/rust-cache@v2
+
+    - name: Build Release
+      run: cargo build --release
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rust-binary
+        path: target/release/ # Сюда сохраняется скомпилированный файл
+name: Rust Build
+
+on:
+  push:
+    branches: [ "main", "master" ] # Замените на имя вашей главной ветки, если она другая
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Rust Cache
+      uses: swatinem/rust-cache@v2
+
+    - name: Build Release
+      run: cargo build --release
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: rust-binary
+        path: target/release/ # Сюда сохраняется скомпилированный файл
