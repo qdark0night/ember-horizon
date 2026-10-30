@@ -1,18 +1,33 @@
-name: Rust Build
+name: Release Build
 
 on:
   push:
-    branches: [ "main", "master" ] # Замените на имя вашей главной ветки, если она другая
-  pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "main" ]
+
+permissions:
+  contents: write
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact_name: libhorizon_ember.so
+          - os: windows-latest
+            artifact_name: horizon_ember.dll
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Install Linux Dependencies
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libx11-dev libxrandr-dev libxi-dev libxcursor-dev libgl1-mesa-dev pkg-config
 
     - name: Set up Rust
       uses: dtolnay/rust-toolchain@stable
@@ -23,38 +38,13 @@ jobs:
     - name: Build Release
       run: cargo build --release
 
-    - name: Upload Artifact
+    - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: rust-binary
-        path: target/release/ # Сюда сохраняется скомпилированный файл
-name: Rust Build
-
-on:
-  push:
-    branches: [ "main", "master" ] # Замените на имя вашей главной ветки, если она другая
-  pull_request:
-    branches: [ "main", "master" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Rust
-      uses: dtolnay/rust-toolchain@stable
-
-    - name: Rust Cache
-      uses: swatinem/rust-cache@v2
-
-    - name: Build Release
-      run: cargo build --release
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: rust-binary
-        path: target/release/ # Сюда сохраняется скомпилированный файл
+        name: ember-build-${{ matrix.os }}
+        path: |
+          target/release/libhorizon_ember.so
+          target/release/horizon_ember.dll
+          target/release/*.so
+          target/release/*.dll
+        if-no-files-found: warn
