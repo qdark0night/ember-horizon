@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ember_lamp:ember_lamp"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "ember_lamp:blocks/ember_lamp"
+}

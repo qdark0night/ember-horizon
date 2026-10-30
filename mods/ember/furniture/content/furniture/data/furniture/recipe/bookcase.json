@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP",
+    "BBB",
+    "PPP"
+  ],
+  "key": {
+    "P": "minecraft:dark_oak_planks",
+    "B": "minecraft:book"
+  },
+  "result": {
+    "id": "furniture:bookcase",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "furniture:chair",
+    "furniture:stool",
+    "furniture:armchair",
+    "furniture:bench",
+    "furniture:table",
+    "furniture:coffee_table",
+    "furniture:nightstand",
+    "furniture:kitchen_counter",
+    "furniture:bookcase",
+    "furniture:test_block"
+  ]
+}

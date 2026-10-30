@@ -1,0 +1,11 @@
+{
+  "template": "minecraft:lantern",
+  "properties": {
+    "hardness": 1.0,
+    "explosion_resistance": 3.0,
+    "sounds": "minecraft:lantern",
+    "map_color": 13,
+    "light": 14
+  },
+  "item": true
+}

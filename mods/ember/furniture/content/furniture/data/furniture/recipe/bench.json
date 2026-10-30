@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "S  ",
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "S": "minecraft:oak_slab",
+    "L": "minecraft:dark_oak_log"
+  },
+  "result": {
+    "id": "furniture:bench",
+    "count": 2
+  }
+}

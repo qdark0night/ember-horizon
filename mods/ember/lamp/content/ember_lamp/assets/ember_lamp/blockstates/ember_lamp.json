@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ember_lamp:block/ember_lamp"
+    }
+  }
+}

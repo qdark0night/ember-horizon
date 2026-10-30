@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "G",
+    "S"
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "G": "minecraft:glowstone_dust",
+    "S": "minecraft:oak_slab"
+  },
+  "result": {
+    "id": "furniture:table_lamp",
+    "count": 1
+  }
+}

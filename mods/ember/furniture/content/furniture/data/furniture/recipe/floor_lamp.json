@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "G",
+    "I"
+  ],
+  "key": {
+    "W": "minecraft:white_wool",
+    "G": "minecraft:glowstone",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "furniture:floor_lamp",
+    "count": 1
+  }
+}

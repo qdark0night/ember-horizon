@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "furniture:block/kitchen_counter",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "furniture:block/kitchen_counter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "furniture:block/kitchen_counter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "furniture:block/kitchen_counter",
+      "y": 270
+    }
+  }
+}

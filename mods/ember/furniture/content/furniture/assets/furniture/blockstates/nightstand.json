@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "furniture:block/nightstand",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "furniture:block/nightstand",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "furniture:block/nightstand",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "furniture:block/nightstand",
+      "y": 270
+    }
+  }
+}

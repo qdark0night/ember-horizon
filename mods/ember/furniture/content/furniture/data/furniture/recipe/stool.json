@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PPP",
+    "S S"
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "P": "minecraft:spruce_slab"
+  },
+  "result": {
+    "id": "furniture:stool",
+    "count": 2
+  }
+}

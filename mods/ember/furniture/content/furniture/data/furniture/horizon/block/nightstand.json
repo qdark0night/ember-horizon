@@ -1,0 +1,10 @@
+{
+  "template": "minecraft:dried_ghast",
+  "properties": {
+    "hardness": 2.0,
+    "explosion_resistance": 3.0,
+    "sounds": "minecraft:oak_planks",
+    "map_color": 13
+  },
+  "item": true
+}

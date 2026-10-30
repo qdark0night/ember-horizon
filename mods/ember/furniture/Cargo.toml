@@ -1,0 +1,16 @@
+[package]
+name = "ember-furniture"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish = false
+description = "Ember furniture: seats you can sit on, tables, storage, lamps (docs/ember.md)"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ember-api = { path = "../../../crates/ember-api" }
+
+[lints]
+workspace = true
